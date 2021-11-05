@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:controller="com.devtty.SampleController" xmlns:fx="http://javafx.com/fxml">
+  <top>
+    <VBox>
+      <MenuBar>
+	<menus>
+	  <Menu text="File">
+	    <MenuItem text="New"/>
+	    <MenuItem fx:id="fileOpenMenuItem" text="Open" onAction="#openFileDialog"/>
+	    <MenuItem text="Save"/>
+	    <MenuItem text="Exit"/>
+	  </Menu>
+	</menus>
+      </MenuBar>
+      <ToolBar>
+	<HBox>
+	  <Button text="Open" onAction="#openFileDialog"/>
+	  <Button text="Check Syntax"/>
+	  <Button text="Check Http" onAction="#checkHttp"/>
+	  <Button text="Check Visual"/>
+	  <Button text="Check Google Security SafeBrowsing"/>
+	</HBox>
+      </ToolBar>
+    </VBox>
+  </top>
+  <center>
+    <SplitPane>
+      <items>
+	<SplitPane orientation="VERTICAL">
+	  <items>
+	    <TabPane>
+	      <tabs>
+		<Tab text="A">
+		  <content>
+		    <!--TREE-->
+		    <TreeView fx:id="treeView"/>
+		  </content>
+		</Tab>
+		<Tab text="B">
+		  <content>
+		    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="3">
+		      <columns>
+			<TableColumn text="URL"></TableColumn>
+			<TableColumn text="Status"></TableColumn>
+		      </columns>
+		    </TableView>
+		  </content>
+		</Tab>
+	      </tabs>
+	    </TabPane>
+	    <!--PropertyPane-->
+	  </items>
+	</SplitPane>
+	<!--MainView-->
+	<GridPane alignment="center" hgap="10" vgap="10">
+	  <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+	  <Text text="Welcome" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+	  
+	  <Label text="User Name:"
+             GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+	  
+	  <TextField 
+          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+	  
+	  <Label text="Password:"
+             GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+      
+	  <PasswordField fx:id="passwordField" 
+			 GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+      
+	</GridPane>
+      </items>
+    </SplitPane>
+  </center>
+</BorderPane>
