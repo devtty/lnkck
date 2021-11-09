@@ -39,18 +39,12 @@
 	      <tabs>
 		<Tab text="A">
 		  <content>
-		    <!--TREE-->
-		    <TreeView fx:id="treeView"/>
+		    <TreeTableView fx:id="treeTableView"/>
 		  </content>
 		</Tab>
 		<Tab text="B">
 		  <content>
-		    <TableView fx:id="tableView" GridPane.columnIndex="0" GridPane.rowIndex="3">
-		      <columns>
-			<TableColumn text="URL"></TableColumn>
-			<TableColumn text="Status"></TableColumn>
-		      </columns>
-		    </TableView>
+		    <TableView fx:id="tableView"/>
 		  </content>
 		</Tab>
 	      </tabs>
