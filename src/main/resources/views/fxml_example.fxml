@@ -37,12 +37,12 @@
 	  <items>
 	    <TabPane>
 	      <tabs>
-		<Tab text="A">
+		<Tab text="Baumansicht">
 		  <content>
 		    <TreeTableView fx:id="treeTableView"/>
 		  </content>
 		</Tab>
-		<Tab text="B">
+		<Tab text="Tabelle">
 		  <content>
 		    <TableView fx:id="tableView"/>
 		  </content>
